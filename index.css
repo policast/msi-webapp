@@ -1,0 +1,20 @@
+.btn {
+    background-color: white;
+    color: black;
+    border-color: rgb(123, 123, 123);
+    border-width: 0.15em;
+}
+
+.btn-check+.btn:hover {
+    color: black;
+    background-color: rgb(240, 240, 240);
+    border-color: black;
+    border-width: 0.15em;
+}
+
+.btn-check:checked+.btn {
+    color: #fff;
+    background-color: #198754;
+    border-color: black;
+    border-width: 0.15em;
+}

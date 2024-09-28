@@ -22,6 +22,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="index.css" />
+    <script src="index.js"></script>
+    <script>fetchPodcastFiles()</script>
   </head>
   <body>
     <div>
@@ -34,41 +36,15 @@
       <div style="margin: 6em;" class="text-center">
         <h5>An welchen Themen bist du interessiert?</h5>
       </div>
-      <div class="text-center">
+      <div id="tags" class="text-center">
 
-    <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
-    <label class="btn btn-primary" for="btn-check">Rentner</label>
-    
-    <input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
-    <label class="btn btn-primary" for="btn-check-2">Offener Ganztag</label>
-
-    <input type="checkbox" class="btn-check" id="btn-check-3" checked autocomplete="off">
-    <label class="btn btn-primary" for="btn-check-3">Fahrrad</label>
-
-    <input type="checkbox" class="btn-check" id="btn-check-4" checked autocomplete="off">
-    <label class="btn btn-primary" for="btn-check-4">Auto</label>
-
-    <input type="checkbox" class="btn-check" id="btn-check-5" checked autocomplete="off">
-    <label class="btn btn-primary" for="btn-check-5">ÖPNV</label>
-
-    <input type="checkbox" class="btn-check" id="btn-check-6" checked autocomplete="off">
-    <label class="btn btn-primary" for="btn-check-6">Kinder</label>
-
-    <input type="checkbox" class="btn-check" id="btn-check-7" checked autocomplete="off">
-    <label class="btn btn-primary" for="btn-check-7">Label</label>
-
-    <input type="checkbox" class="btn-check" id="btn-check-8" checked autocomplete="off">
-    <label class="btn btn-primary" for="btn-check-8">Label</label>
-
-    <input type="checkbox" class="btn-check" id="btn-check-9" checked autocomplete="off">
-    <label class="btn btn-primary" for="btn-check-9">Label</label>
-</div>
+        </div>
 
     <div class="text-center fixed-bottom" style="margin-bottom: 2em;">
-            <button type="button" class="btn btn-primary btn-lg" style="width: 90%;">Hören!</button>
-        
+            <button id="listenButton" onclick="getPersonalizedPodcast()" type="button" class="btn btn-primary btn-lg" style="width: 90%;">Hören!</button>
     </div>
 
     </div>
   </body>
+  <script defer>fillTags()</script>
 </html>

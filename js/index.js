@@ -21,11 +21,16 @@ function fillTags() {
         tag.className = 'btn-check';
         tag.id = `btn-check-${i}`;
         tag.autocomplete = 'off';
+        tag.onclick = writeCookie;
 
         const label = document.createElement('label');
         label.className = 'btn btn-primary';
         label.htmlFor = tag.id;
         label.textContent = tags[i];
+        const selectedTags = JSON.parse(localStorage.getItem('selectedTags')) || [];
+        if (selectedTags.includes(tags[i])) {
+            tag.checked = true;
+        }
 
         tagsHTML.appendChild(tag);
         tagsHTML.appendChild(label);
@@ -41,5 +46,17 @@ function getPersonalizedPodcast() {
     listenButton.disabled = true;
     alert("Dein Podcast wird generiert");
     window.location.href = "podcast.html";
+}
+
+function writeCookie() {
+    const selectedTags = [];
+    const tags = document.querySelectorAll('.btn-check');
+    tags.forEach(tag => {
+        if (tag.checked) {
+            selectedTags.push(tag.nextElementSibling.textContent);
+        }
+    });
+    localStorage.setItem('selectedTags', JSON.stringify(selectedTags));
+    console.info(selectedTags);
 }
 

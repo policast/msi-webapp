@@ -5,14 +5,14 @@ function fillTags() {
         "Technik",
         "Wissenschaft",
         "Politik",
-        "Kultur",
+        "Verkehr",
         "Wirtschaft",
         "Umwelt",
         "Kunst",
         "Geschichte",
         "Bildung",
         "Reisen",
-        "Essen"
+        "Schule"
     ];
     const tagsHTML = document.getElementById('tags');
     for (var i = 0; i < tags.length; i++) {

@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    <script src="./js/index.js"></script>
     <script src="js/podcast.js"></script>
     <script src="js/audio-processor.js"></script>
 
@@ -31,7 +32,7 @@
     </script>
 
 </head>
-<body class="center">
+<body class="center" onload="setSelectedThemes()">
   
   <div class="maincontent">
     <img class="logo" src="./assets/logo.PNG" alt="">
@@ -39,7 +40,7 @@
     <p class="podcasttext">Hier ist dein personalisierter Podcast der Woche</p>
 
     <div class="center podcast" id="themesList">
-    <h3>Dein Podcast zu den Themen: Offener Ganztag - Kinder - Roxel</h3>
+    <h3 >Dein Podcast zu den <span id="choosenthemes"></span></h3>
     <img src="./assets/play-circle.svg" id="playIcon"  onclick="playPodcast()">
     </div>
 

@@ -38,12 +38,19 @@ function fillTags() {
     }
 }
 
+function setSelectedThemes() {
+    const content = document.getElementById('choosenthemes')
+
+    const themes = localStorage.getItem("selectedTags");
+    content.innerHTML = /*html*/`
+        
+    `
+}
+
 function checkDisable(tagsIndex,tag) {
     if (tagsIndex == 'Umwelt'|| tagsIndex == 'Schule' || tagsIndex == 'Verkehr') {
-        console.log('if')
         
     } else {
-        console.log('else')
         return tag.disabled = true;
     }
 }
@@ -68,6 +75,13 @@ function writeCookie() {
         }
     });
     localStorage.setItem('selectedTags', JSON.stringify(selectedTags));
-    console.info(selectedTags);
+    selectedTags.forEach(element => {
+        content.innerHTML += /*html*/`
+            ${element} 
+        `
+        console.log(element)
+    });
 }
+
+
 

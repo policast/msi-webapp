@@ -22,6 +22,7 @@ function fillTags() {
         tag.id = `theme${i}`;
         tag.autocomplete = 'off';
         tag.onclick = writeCookie;
+        checkDisable(tags[i],tag);
 
         const label = document.createElement('label');
         label.className = 'themetag';
@@ -34,6 +35,16 @@ function fillTags() {
 
         tagsHTML.appendChild(tag);
         tagsHTML.appendChild(label);
+    }
+}
+
+function checkDisable(tagsIndex,tag) {
+    if (tagsIndex == 'Umwelt'|| tagsIndex == 'Schule' || tagsIndex == 'Verkehr') {
+        console.log('if')
+        
+    } else {
+        console.log('else')
+        return tag.disabled = true;
     }
 }
 
@@ -59,6 +70,4 @@ function writeCookie() {
     localStorage.setItem('selectedTags', JSON.stringify(selectedTags));
     console.info(selectedTags);
 }
-
-
 

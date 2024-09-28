@@ -18,14 +18,21 @@ h1 {
     text-align: center;    
 }
 
+.centertext {
+    text-align: center !important;
+}
+
 .maincontent {
     position: relative;
     padding: 30px;
     flex-direction: column;
     position: relative;
     width: 390px;
-    height: 844px;
-    
+    height: 844px;    
+}
+
+.d-none{
+    display: none;
 }
 
 .podcasttext {

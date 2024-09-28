@@ -60,3 +60,5 @@ function writeCookie() {
     console.info(selectedTags);
 }
 
+
+

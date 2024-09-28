@@ -12,6 +12,25 @@
       rel="stylesheet"
     />
     <script src="js/podcast.js"></script>
+    <script src="js/audio-processor.js"></script>
+
+    <script>
+      const audioFiles = [
+        'audio/AudioA.mp3',
+        'audio/AudioB.mp3',
+        // Fügen Sie weitere Dateipfade hinzu
+      ];
+  
+      async function stitchAndPlayAudio() {
+        const combinedAudioBuffer = await stitchAudioFiles(audioFiles);
+        const audioBlob = audioBufferToWav(combinedAudioBuffer);
+        const audioUrl = URL.createObjectURL(audioBlob);
+        const audioElement = document.getElementById('audioControll');
+        audioElement.src = audioUrl;
+        audioElement.play();
+      }
+    </script>
+
 </head>
 <body class="center">
    
@@ -31,4 +50,5 @@
     <div class="buttonreturntothemes"><a href="./index.html">Meine Themen anpassen</a></div>
   </div>
 </body>
+<script>stitchAndPlayAudio()</script>
 </html>

@@ -7,7 +7,7 @@ function fillTags() {
         "Politik",
         "Kultur",
         "Wirtschaft",
-        "Musik",
+        "Umwelt",
         "Kunst",
         "Geschichte",
         "Bildung",
@@ -18,13 +18,13 @@ function fillTags() {
     for (var i = 0; i < tags.length; i++) {
         const tag = document.createElement('input');
         tag.type = 'checkbox';
-        tag.className = 'btn-check';
-        tag.id = `btn-check-${i}`;
+        tag.className = 'checkboxtheme d-none';
+        tag.id = `theme${i}`;
         tag.autocomplete = 'off';
         tag.onclick = writeCookie;
 
         const label = document.createElement('label');
-        label.className = 'btn btn-primary';
+        label.className = 'themetag';
         label.htmlFor = tag.id;
         label.textContent = tags[i];
         const selectedTags = JSON.parse(localStorage.getItem('selectedTags')) || [];
@@ -50,7 +50,7 @@ function getPersonalizedPodcast() {
 
 function writeCookie() {
     const selectedTags = [];
-    const tags = document.querySelectorAll('.btn-check');
+    const tags = document.querySelectorAll('.checkboxtheme');
     tags.forEach(tag => {
         if (tag.checked) {
             selectedTags.push(tag.nextElementSibling.textContent);

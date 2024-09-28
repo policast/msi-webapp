@@ -53,6 +53,37 @@ h1 {
     align-items: center;
 }
 
+.content {
+    height: 500px;
+}
+
+.themetag {
+    padding: 5px 15px;
+    border: solid 1px black;
+    border-radius: 25px;
+}
+
+ input.checkboxtheme:checked + .themetag{
+    background-color: black;
+    color: white;
+}
+
+input.checkboxtheme:checked + .themetag::before {
+    content: url(/assets/check.svg);
+    height: 20px;
+    width: 20px;
+    filter: invert(1);
+    padding-right: 5px;
+    
+}
+
+.tagsbuttons {
+    gap: 7px;
+    flex-wrap:wrap;
+    width: 100%;
+    height: 170px;
+}
+
 .podcast {
     text-align: left;
     gap: 10px;

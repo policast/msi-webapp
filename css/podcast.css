@@ -1,0 +1,18 @@
+html {
+    font-family: inter;
+}
+
+body {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100dvh;
+    width: 100dvw;
+}
+
+h1 {
+    text-align: center;    
+}
+

@@ -19,11 +19,13 @@ h1 {
 }
 
 .maincontent {
+    position: relative;
     padding: 30px;
-    height: 100%;
-    width: 100%;
     flex-direction: column;
     position: relative;
+    width: 390px;
+    height: 844px;
+    
 }
 
 .podcasttext {
@@ -52,9 +54,14 @@ h1 {
     text-align: center;
     background-color: rgb(129, 123, 123);
     color: white;
-    position: fixed;
+    position: absolute;
     max-width: 350px;
     bottom: 40px;
     left: 20px;
     right: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
 }

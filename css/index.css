@@ -1,25 +1,79 @@
-.html {
-    font: inter;
+html {
+    font-family: inter;
 }
 
-.btn {
-    background-color: rgb(255, 255, 255);
-    color: black;
-    border-color: rgb(123, 123, 123);
-    border-width: 0.15em;
-    margin: 0.2em;
+*{
+    box-sizing: border-box;
 }
 
-.btn-check+.btn:hover {
-    color: black;
-    background-color: rgb(240, 240, 240);
-    border-color: black;
-    border-width: 0.15em;
+body {
+
+    flex-direction: column;
+    height: 100dvh;
+    width: 100dvw;
+    margin: 0;
 }
 
-.btn-check:checked+.btn {
-    color: #fff;
-    background-color: #198754;
-    border-color: black;
-    border-width: 0.15em;
+h1 {
+    text-align: center;    
+}
+
+.centertext {
+    text-align: center !important;
+}
+
+.maincontent {
+    position: relative;
+    padding: 30px;
+    flex-direction: column;
+    position: relative;
+    width: 390px;
+    height: 844px;    
+}
+
+.d-none{
+    display: none;
+}
+
+.podcasttext {
+    text-align: center;
+}
+
+#playIcon {
+    cursor: pointer;
+}
+
+.themestext {
+    text-align: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.podcast {
+    text-align: left;
+    gap: 10px;
+}
+
+.buttonreturntothemes {
+    padding: 10px 10px;
+    border: 1px solid rgb(129, 123, 123);
+    border-radius: 25px;
+    text-align: center;
+    background-color: rgb(129, 123, 123);
+    color: white;
+    position: absolute;
+    max-width: 350px;
+    bottom: 40px;
+    left: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+a {
+    color: white;
+    text-decoration: none;
 }

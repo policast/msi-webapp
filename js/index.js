@@ -38,17 +38,8 @@ function fillTags() {
     }
 }
 
-function setSelectedThemes() {
-    const content = document.getElementById('choosenthemes')
-
-    const themes = localStorage.getItem("selectedTags");
-    content.innerHTML = /*html*/`
-        
-    `
-}
-
 function checkDisable(tagsIndex,tag) {
-    if (tagsIndex == 'Umwelt'|| tagsIndex == 'Schule' || tagsIndex == 'Verkehr') {
+    if (tagsIndex == 'Umwelt') {
         
     } else {
         return tag.disabled = true;
@@ -62,7 +53,6 @@ function fetchPodcastFiles() {
 function getPersonalizedPodcast() {
     const listenButton = document.getElementById('listenButton');
     listenButton.disabled = true;
-    alert("Dein Podcast wird generiert");
     window.location.href = "podcast.html";
 }
 

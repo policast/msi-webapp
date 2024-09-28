@@ -2,17 +2,59 @@ html {
     font-family: inter;
 }
 
-body {
+*{
     box-sizing: border-box;
-    display: flex;
-    justify-content: center;
+}
+
+body {
+
     flex-direction: column;
-    align-items: center;
     height: 100dvh;
     width: 100dvw;
+    margin: 0;
 }
 
 h1 {
     text-align: center;    
 }
 
+.maincontent {
+    padding: 30px;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+}
+
+.podcasttext {
+    text-align: center;
+}
+
+.themestext {
+    text-align: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.podcast {
+    text-align: left;
+    gap: 10px;
+}
+
+.buttonreturntothemes {
+    padding: 10px 10px;
+    border: 1px solid black;
+    border-radius: 25px;
+    text-align: center;
+    background-color: rgb(129, 123, 123);
+    color: white;
+    position: fixed;
+    max-width: 350px;
+    bottom: 40px;
+    left: 20px;
+    right: 20px;
+}

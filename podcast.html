@@ -15,9 +15,13 @@
     <script src="js/audio-processor.js"></script>
 
     <script>
-      const audioFiles = buildAudioOrder();
+      const audioFiles = [
+        'audio/AudioA.mp3',
+        'audio/AudioB.mp3',
+        // Fügen Sie weitere Dateipfade hinzu
+      ];
   
-      async function stitch() {
+      async function stitchAndPlayAudio() {
         const combinedAudioBuffer = await stitchAudioFiles(audioFiles);
         const audioBlob = audioBufferToWav(combinedAudioBuffer);
         const audioUrl = URL.createObjectURL(audioBlob);
@@ -28,9 +32,9 @@
 
 </head>
 <body class="center">
-   
-  <div class="maincontent center">
-    <img class="Logo" src="./assets/logo.PNG" alt="">
+  
+  <div class="maincontent">
+    <img class="logo" src="./assets/logo.PNG" alt="">
 
     <p class="podcasttext">Hier ist dein personalisierter Podcast der Woche</p>
 
@@ -45,5 +49,5 @@
     <div class="buttonreturntothemes"><a href="./index.html">Meine Themen anpassen</a></div>
   </div>
 </body>
-<script>stitch()</script>
+<script>stitchAndPlayAudio()</script>
 </html>

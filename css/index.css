@@ -24,11 +24,13 @@ h1 {
 
 .maincontent {
     position: relative;
-    padding: 30px;
+    padding: 50px 30px 30px 30px;
     flex-direction: column;
-    position: relative;
     width: 390px;
-    height: 844px;    
+    height: 844px;  
+    display: flex;
+    justify-content: flex-start;  
+    align-items: center;   
 }
 
 .d-none{
@@ -37,6 +39,7 @@ h1 {
 
 .podcasttext {
     text-align: center;
+    padding-top: 100px;
 }
 
 #playIcon {
@@ -53,9 +56,7 @@ h1 {
     align-items: center;
 }
 
-.content {
-    height: 500px;
-}
+
 
 .themetag {
     padding: 5px 15px;
@@ -81,6 +82,14 @@ input.checkboxtheme:checked + .themetag::before {
     padding-right: 5px;    
 }
 
+.logo {
+    width: 100%;
+    padding: 110px 30px 30px 30px ;
+    padding-top: 80px;
+    max-width: 390px;
+    max-height: 844px;   
+}
+
 .tagsbuttons {
     gap: 7px;
     flex-wrap:wrap;
@@ -103,8 +112,7 @@ input.checkboxtheme:checked + .themetag::before {
     position: absolute;
     max-width: 350px;
     bottom: 40px;
-    left: 20px;
-    right: 20px;
+    width: 90%;
     cursor: pointer;
 }
 

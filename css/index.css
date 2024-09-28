@@ -63,8 +63,13 @@ h1 {
     border-radius: 25px;
 }
 
- input.checkboxtheme:checked + .themetag{
+input.checkboxtheme:checked + .themetag{
     background-color: black;
+    color: white;
+}
+
+input.checkboxtheme:disabled + .themetag{
+    background-color: rgb(196, 189, 189);
     color: white;
 }
 

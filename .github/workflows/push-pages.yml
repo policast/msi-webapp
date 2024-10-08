@@ -1,4 +1,4 @@
-name: push to pages
+name: push-pages
 
 on:
   workflow_dispatch:

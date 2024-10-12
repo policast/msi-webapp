@@ -1,41 +1,39 @@
 <!DOCTYPE html>
 <html lang="de">
   <head>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Münster interessiert's</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet"/>
     <link rel="stylesheet" href="css/index.css" />
     <script src="js/index.js"></script>
     <script>fetchPodcastFiles()</script>
+
   </head>
   <body class="center">
     
     <div class="maincontent">
-      <img class="logo" src="assets/logo.PNG" alt="">
-      <div class="content">
-          <h5>Münsterhack 2024</h5>
-      </div>
+      
+      <img class="logo" src="assets/logo.PNG">
   
-        <div class="themestext center">
-          <h5>An welchen Themen bist du interessiert?</h5>
-        </div>
-        <div id="tags" class="tagsbuttons center">
-  
-        </div>  
-  
+      <div class="themestext center">
+        <h5>An welchen Themen bist du interessiert?</h5>
       </div>
 
-      <div class="buttonreturntothemes" id="listenButton"  onclick="getPersonalizedPodcast()">Zu meinem Podcast
+      <div id="tags" class="tagsbuttons center">
+      </div>  
 
+      <div class="buttonreturntothemes" id="listenButton"  onclick="getPersonalizedPodcast()">
+        Zu meinem Podcast
       </div>
+
     </div>
-
 
   </body>
   <script defer>fillTags()</script>

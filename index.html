@@ -13,10 +13,9 @@
       rel="stylesheet"/>
     <link rel="stylesheet" href="css/index.css" />
     <script src="js/index.js"></script>
-    <script>fetchPodcastFiles()</script>
 
   </head>
-  <body class="center">
+  <body class="center" onload="fillTags()">
     
     <div class="maincontent">
       
@@ -29,14 +28,13 @@
       <div id="tags" class="tagsbuttons center">
       </div>  
 
-      <div class="buttonreturntothemes" id="listenButton"  onclick="getPersonalizedPodcast()">
-        Zu meinem Podcast
-      </div>
+      <a href="/podcast.html" class="buttonreturntothemes" id="listenButton">
+          Zu meinem Podcast
+      </a>
 
     </div>
 
   </body>
-  <script defer>fillTags()</script>
 </html>
 
 

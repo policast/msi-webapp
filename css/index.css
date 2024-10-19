@@ -104,6 +104,7 @@ input.checkboxtheme:checked + .themetag::before {
 .podcast {
     text-align: left;
     gap: 10px;
+    margin: 0 1%;
 }
 
 .buttonreturntothemes {

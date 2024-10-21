@@ -23,7 +23,7 @@
       ];
   
       async function stitchAndPlayAudio() {
-        const combinedAudioBuffer = await stitchAudioFiles(audioFiles);
+        const combinedAudioBuffer = await stitchAudioFiles(buildAudioOrder());
         const audioBlob = audioBufferToWav(combinedAudioBuffer);
         const audioUrl = URL.createObjectURL(audioBlob);
         const audioElement = document.getElementById('audioControll');
@@ -32,7 +32,7 @@
     </script>
 
 </head>
-<body class="center" onload="setSelectedThemes()">
+<body class="center">
   
   <div class="maincontent">
     <img class="logo" src="./assets/logo.PNG" alt="">

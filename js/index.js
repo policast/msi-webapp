@@ -102,3 +102,10 @@ function writeLocalStorage() {
 
     localStorage.setItem('selectedTags', JSON.stringify(selectedTags));
 }
+
+function setCategoriesForPodcast() {
+    const selectedTags = JSON.parse(localStorage.getItem('selectedTags')) || [];
+    const content = document.getElementById('categories');
+    console.log(selectedTags)
+    selectedTags.forEach(tag => {content.innerHTML += tag+' ';})
+}

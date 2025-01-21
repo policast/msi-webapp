@@ -1,0 +1,137 @@
+html {
+    font-family: inter, sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgrey;
+    flex-direction: column;
+    height: 100dvh;
+    width: 100dvw;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;    
+}
+
+.centertext {
+    text-align: center !important;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.maincontent {
+    position: relative;
+    padding: 3%;
+    flex-direction: column;
+    max-width: 390px;
+    width: 100%;
+    height: 100%;
+    max-height: 844px;  
+    display: flex;
+    justify-content: flex-start;  
+    align-items: center;  
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 50px ;
+}
+
+.d-none{
+    display: none;
+}
+
+.podcasttext {
+    text-align: center;
+    padding-top: 100px;
+}
+
+#playIcon {
+    cursor: pointer;
+}
+
+.themestext {
+    text-align: center;
+    padding: 5%
+}
+
+.themetag {
+    padding: 4px 14px;
+    border: solid 1px black;
+    border-radius: 25px;
+}
+
+input.checkboxtheme:checked + .themetag{
+    background-color: black;
+    color: white;
+}
+
+input.checkboxtheme:disabled + .themetag{
+    background-color: rgb(196, 189, 189);
+    color: white;
+}
+
+input.checkboxtheme:checked + .themetag::before {
+    content: url(/assets/check.svg);
+    height: 20px;
+    width: 20px;
+    filter: invert(1);
+    padding-right: 5px;    
+}
+
+.logo {
+    width: 100%;
+    padding: 25% 5% 5% 5%; ;
+    max-width: 390px;
+    max-height: 844px;   
+}
+
+.tagsbuttons {  
+    gap: 0.3em;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    padding: 5% 5% 10% 5%;
+}
+
+.podcast {
+    text-align: left;
+    gap: 10px;
+    margin: 0 1%;
+}
+
+.buttonreturntothemes {
+    padding: 10px 10px;
+    border: 1px solid rgb(129, 123, 123);
+    border-radius: 25px;
+    text-align: center;
+    background-color: rgb(129, 123, 123);
+    color: white;
+    position: absolute;
+    max-width: 350px;
+    bottom: 40px;
+    width: 90%;
+    cursor: pointer;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+@media(max-width:420px) {
+    body{
+        background-color: unset;
+    }
+
+    .maincontent {
+        border: unset;
+    }
+}

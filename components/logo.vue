@@ -12,7 +12,7 @@
 .logo-wrapper {
     @include mix.center();
     flex-direction: column;
-    padding: 16px;
+    padding: 24px 0;
 
     img {
         margin: 5vh 0 16px 40px;

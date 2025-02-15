@@ -1,2 +1,15 @@
 @use 'mixins' as m;
 
+*{
+    margin: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+.d-none {
+    display: none !important;
+  }
+
+  a{
+    text-decoration: none;
+  }

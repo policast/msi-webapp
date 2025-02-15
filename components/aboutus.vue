@@ -5,14 +5,14 @@
             <iframe class="ms-Hack-Video"
                 src="https://www.youtube.com/embed/OuShG0X0udw?si=Gom9cHgs-deTD8iF&amp;start=2953"
                 title="YouTube video player" frameborder="0" allow="accelerometer; 
-    autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    ; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-                <ul>
-                    <li>Unserer Antrieb ist...</li>
-                    <li>Wir suchen ...</li>
-                    <li>Was brauchen wir..</li>
-                </ul>
+            <ul>
+                <li>Unserer Antrieb ist...</li>
+                <li>Wir suchen ...</li>
+                <li>Was brauchen wir..</li>
+            </ul>
         </div>
 
         <div class="buttonreturntothemes"></div>
@@ -29,16 +29,16 @@
     border-radius: 20px;
 }
 
-h2{
+h2 {
     font-size: 32px;
     font-weight: 600;
     margin-bottom: 32px
 }
 
-.about-video{
+.about-video {
     @include mix.center();
 
-    ul{
+    ul {
         align-self: flex-start;
     }
 }
@@ -48,3 +48,7 @@ h2{
     height: 40vh;
 }
 </style>
+
+<script setup lang="ts">
+
+</script>

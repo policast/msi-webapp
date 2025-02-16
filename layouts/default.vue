@@ -13,6 +13,7 @@
         </section>
 
         <section class="show-picked-podcasts center">
+            <Podcast/>
         </section>
     </div>
 </template>

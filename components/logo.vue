@@ -8,7 +8,7 @@
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .logo-wrapper {
     @include mix.center();
     flex-direction: column;

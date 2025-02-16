@@ -1,28 +1,31 @@
 <template>
     <div class="themes-wrapper">
+
         <template v-for="(theme, index) in themes" :key="index">
-            <input type="checkbox" :id="`${theme}-${index}`" autocomplete="off" class="theme-checkbox">
-            <label class="theme-label" :for="`${theme}-${index}`">
+            <input type="checkbox" :id="`${index}`" autocomplete="off" class="theme-checkbox d-none"
+                v-model="checkedThemes[index]">
+            <label class="theme-label" :for="`${index}`">
                 {{ theme }}
             </label>
         </template>
+
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .themes-wrapper {
-    @include mix.center();
+    @include mix.center($g: 8px);
     background-color: #D9D9D9;
     flex-wrap: wrap;
     width: 90vw;
-    padding: 24px 0;
+    padding: 24px 16px;
     border-radius: 20px;
 }
 
 .theme-label {
     cursor: pointer;
     background-color: #fff;
-    padding: 4px 14px;
+    padding: 10px 14px;
     border: solid 1px black;
     border-radius: 25px;
 }
@@ -47,7 +50,9 @@ input.theme-checkbox:checked+.theme-label::before {
 </style>
 
 <script lang="ts" setup>
-let themes: string[] = ["Wirtschaft",
+import { ref, onMounted, watch } from 'vue';
+
+let themes = ref(["Wirtschaft",
     "Schulwesen",
     "Finanzen & Haushalt",
     "Bau & Stadtentwicklung",
@@ -57,7 +62,28 @@ let themes: string[] = ["Wirtschaft",
     "Sicherheit & Ordnung",
     "Kultur & Freizeit",
     "Gesundheit & Soziales",
-    "Digitalisierung & Verwaltung"]
+    "Digitalisierung & Verwaltung"]);
 
+const checkedThemes = ref<Record<number, boolean>>({});
+
+onMounted(() => {
+    const saved = localStorage.getItem('checkedThemes');
+
+    if (saved) {
+        checkedThemes.value = JSON.parse(saved);
+    } else {
+        themes.value.forEach((_, index) => {
+            checkedThemes.value[index] = false;
+        });
+    }
+});
+
+watch(
+    checkedThemes,
+    (newVal) => {
+        localStorage.setItem('checkedThemes', JSON.stringify(newVal));
+    },
+    { deep: true },
+);
 
 </script>

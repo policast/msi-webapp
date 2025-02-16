@@ -24,8 +24,8 @@ useHead({
 </script>
 
 <style lang="scss">
- .center{
+.center {
     @include mix.center();
     padding: 20px 0;
- }
+}
 </style>

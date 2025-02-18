@@ -3,13 +3,13 @@
         <h2>Über Münster Interessiert's</h2>
         <div class="about-video">
 
-            <ClientOnly>
+            
                 <iframe class="ms-Hack-Video"
                     src="https://www.youtube.com/embed/OuShG0X0udw?si=Gom9cHgs-deTD8iF&amp;start=2953"
                     title="YouTube video player" frameborder="0" allow="accelerometer; 
     ; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </ClientOnly>
+
 
             <ul>
                 <li>Unserer Antrieb ist...</li>

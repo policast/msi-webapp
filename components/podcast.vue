@@ -1,6 +1,6 @@
 <template>
     <div class="podcast-wrapper">
-
+        <audioplayer/>
     </div>
 </template>
 

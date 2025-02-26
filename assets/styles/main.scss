@@ -13,3 +13,11 @@
   a{
     text-decoration: none;
   }
+
+  @keyframes grow {
+    from{
+      height: inherit;
+    } to {
+      height: fit-content;
+    }
+  }
